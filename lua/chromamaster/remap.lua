@@ -11,6 +11,10 @@ vim.keymap.set("v", "<c-k>", ":m '<-2<CR>gv=gv")
 -- Do not move cursor when joining lines
 vim.keymap.set("n", "J", "mzJ`z")
 
+-- Keep cursor in the middle when you jump trough the file
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
 -- Keep cursor in the middle when you go trough search results
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
