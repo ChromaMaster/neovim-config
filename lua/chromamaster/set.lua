@@ -24,3 +24,5 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.colorcolumn = "80"
 
+-- Ignore case if all lowercase, otherwise case sensitive
+vim.opt.smartcase = true
