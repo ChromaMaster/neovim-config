@@ -7,9 +7,12 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup_servers({
-	'lua_ls',
-	'rust_analyzer',
-	'gopls',
+    'cmake', -- Cmake
+    'bashls', -- Bash
+    'clangd', -- C/C++
+    'jedi_language_server', -- Python
+	'rust_analyzer', -- Rust
+	'gopls', -- Go
 })
 
 lsp.setup()
