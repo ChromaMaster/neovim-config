@@ -29,12 +29,12 @@ require("lazy").setup({
 
     -- Use git inside nvim
     { 'tpope/vim-fugitive' },
-   
+
     -- All this is for the lsp
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 
     {'williamboman/mason.nvim'},
-    
+
     {'williamboman/mason-lspconfig.nvim'},
 
     -- LSP Support
@@ -55,5 +55,5 @@ require("lazy").setup({
     -- until here
 
 
-    { 'github/copilot.vim' }
+    { 'github/copilot.vim', build = ':Copilot setup' }
 })
