@@ -14,7 +14,7 @@ vim.opt.wrap = true
 
 -- Disable highlight search but allow incremental
 vim.opt.hlsearch = false
-vim.opt.incsearch = true 
+vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
