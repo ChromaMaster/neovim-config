@@ -8,23 +8,34 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here
-  -- with the ones you want to install
-  ensure_installed = {
-    'lua_ls', -- Lua
-    'cmake', -- Cmake
-    'bashls', -- Bash
-    'clangd', -- C/C++
-    'jedi_language_server', -- Python
-	'rust_analyzer', -- Rust
-	'gopls', -- Go
-  },
-  handlers = {
-    lsp.default_setup,
-  }
+    -- Replace the language servers listed here
+    -- with the ones you want to install
+    ensure_installed = {
+        'lua_ls', -- Lua
+        'cmake', -- Cmake
+        'bashls', -- Bash
+        'clangd', -- C/C++
+        'jedi_language_server', -- Python
+        'rust_analyzer', -- Rust
+        'gopls', -- Go
+    },
+    handlers = {
+        lsp.default_setup,
+    }
 })
 
 lsp.setup()
+
+require('lspconfig').lua_ls.setup{
+    settings = {
+        Lua = {
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = {'vim'},
+            },
+        },
+    },
+}
 
 -- The plugin responsible for autocompletion is nvim-cmp
 local cmp = require('cmp')
