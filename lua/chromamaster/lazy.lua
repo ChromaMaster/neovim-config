@@ -22,7 +22,7 @@ require("lazy").setup({
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
     -- Jump between opened files
-    { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'ThePrimeagen/harpoon', enabled = false, dependencies = { 'nvim-lua/plenary.nvim' } },
 
     -- See full history of changes
     { 'mbbill/undotree' },
