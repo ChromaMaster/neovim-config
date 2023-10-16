@@ -25,7 +25,7 @@ require("lazy").setup({
     { 'ThePrimeagen/harpoon', dependencies = { 'nvim-lua/plenary.nvim' } },
 
     -- See full history of changes
-    { 'mbbill/undotree' }, 
+    { 'mbbill/undotree' },
 
     -- Use git inside nvim
     { 'tpope/vim-fugitive' },
